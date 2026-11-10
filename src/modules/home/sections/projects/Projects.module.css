@@ -118,8 +118,14 @@
   align-items: center;
   gap: --spacing(2);
   margin-top: --spacing(8);
-  transition-property: color, background-color, border-color, outline-color,
-    text-decoration-color, fill, stroke;
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    outline-color,
+    text-decoration-color,
+    fill,
+    stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 
@@ -146,20 +152,11 @@
 }
 
 .projectImage {
-  height: 400px;
+  height: 500px;
   border-radius: var(--radius-2xl);
   border: 2px solid --alpha(#FFF / 20%);
   object-fit: cover;
   object-position: top;
-
-  @variant md {
-    height: auto;
-  }
-
-  @variant lg {
-    height: auto;
-    object-fit: none;
-  }
 }
 
 .company-name_year {

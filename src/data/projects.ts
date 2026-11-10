@@ -1,12 +1,13 @@
-import { StaticImageData } from "next/image";
-import omega_records from "@/assets/images/projects/omega-records.jpg";
-import game_hub from "@/assets/images/projects/game-hub.jpg";
-import tesloShop from "@/assets/images/projects/teslo-shop-2024.jpg";
+import type { StaticImageData } from "next/image";
 import { type IconType } from "react-icons";
-import { FaReact, FaHtml5, FaCss3, FaBootstrap, FaPaypal } from "react-icons/fa6";
-import { SiTypescript, SiCloudinary, SiPrisma, SiVite } from "react-icons/si";
-import { RiNextjsFill, RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
+import { FaHtml5, FaCss3 } from "react-icons/fa6";
+import { SiTypescript, SiPrisma } from "react-icons/si";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
+import dish_vibes from "@/assets/images/projects/dish-vibes.webp";
+import limefut from "@/assets/images/projects/limefut.webp";
+import viaprima from "@/assets/images/projects/viaprima.webp";
+
 
 interface Project {
   id: string;
@@ -26,50 +27,53 @@ interface Tool {
 
 const portfolioProjects: Project[] = [
   {
-    id: "e9bd8940-e123-4d1e-85af-fd1a8688bfb6",
-    company: "Omega Records",
-    year: "2020",
-    title: "Recordings Studio Web Site",
-    url: "https://qbixmex.github.io/omega-records/",
-    image: omega_records,
-    description: "<p>This website showcases a Recording Studio, highlighting its services, state-of-the-art equipment, experienced team, available courses, and a contact page for inquiries.</p><p>It combines a clean design with responsive functionality to deliver an engaging user experience.</p>",
+    id: "e89f8390-07b5-4098-89b2-53eb09a0f9f9",
+    company: "Limefut",
+    year: "2026",
+    title: "Football App",
+    url: "https://limefut.vercel.app",
+    image: limefut,
+    description: "<p>This is a web application designed to manage a sports football league.</p> <p>It allows administrators to create and manage tournaments, teams, matches, videos, and news articles.</p><p>The application also features a postseason management system, displaying knockout brackets for qualified teams and highlighting the champion of each division.</p>",
     tools: [
       { name: "HTML", icon: FaHtml5 },
       { name: "CSS", icon: FaCss3 },
-      { name: "Bootstrap", icon: FaBootstrap },
-      { name: "Javascript", icon: RiJavascriptFill },
+      { name: "Tailwind", icon: RiTailwindCssFill },
+      { name: "Typescript", icon: SiTypescript },
+      { name: "NextJs", icon: RiNextjsFill },
+      { name: "Prisma", icon: SiPrisma },
+      { name: "Postgres", icon: BiLogoPostgresql },
     ],
   },
   {
-    id: "e89f8390-07b5-4098-89b2-53eb09a0f9f9",
-    company: "Game Hub",
-    year: "2023",
-    title: "Video Games Platform",
-    url: "https://game-hub-qbixmex.vercel.app",
-    image: game_hub,
-    description: "<p>This React-based website lets users explore a curated selection of video games, offering powerful filters by platform, genre, and relevance and search functionality.</p><p>Each game has a detailed view, showcasing its description, Metascore, publisher information, and Gameplay images for an immersive browsing experience.</p>",
+    id: "e9bd8940-e123-4d1e-85af-fd1a8688bfb6",
+    company: "Dish Vibes",
+    year: "2026",
+    title: "Restaurant App",
+    url: "https://dish-vibes.vercel.app",
+    image: dish_vibes,
+    description: "<p>This website showcases a restaurant app featuring a menu where customers can browse dishes, add items to their order, and manage their selections.</p><p>Customers can also make reservations by completing a booking form.</p><p>On the Orders page, they can update item quantities, remove dishes, and continue adding more items before finalizing their order.</p>",
     tools: [
-      { name: "Vite", icon: SiVite },
-      { name: "React", icon: FaReact },
+      { name: "HTML", icon: FaHtml5 },
+      { name: "CSS", icon: FaCss3 },
+      { name: "Tailwind", icon: RiTailwindCssFill },
       { name: "Typescript", icon: SiTypescript },
+      { name: "NextJs", icon: RiNextjsFill },
     ],
   },
   {
     id: "4a9d26c4-49eb-466e-8793-6d6e23d21e11",
-    company: "Teslo Shop",
-    year: "2024",
-    title: "E-commerce Platform",
-    url: "https://teslo-shop-2024-green.vercel.app/",
-    image: tesloShop,
-    description: "<p>This full-stack shopping cart website features a complete online clothing store for Men, Women, and Kids, with integrated database support, product image uploads, and PayPal payment processing.</p><p>Users can filter clothing by category, while an admin panel allows for seamless product management and updates.</p>",
+    company: "Via Prima",
+    year: "2026",
+    title: "Package Delivery",
+    url: "https://www.viaprima.com.mx/",
+    image: viaprima,
+    description: "<p>This is a website for a parcel delivery company that explains its package receiving and shipping processes.</p><p>It showcases the company's services, provides a frequently asked questions section, and includes a contact form and essential contact information to help customers get in touch.</p>",
     tools: [
-      { name: "Next.js", icon: RiNextjsFill },
-      { name: "Typescript", icon: SiTypescript },
+      { name: "HTML", icon: FaHtml5 },
+      { name: "CSS", icon: FaCss3 },
       { name: "Tailwind", icon: RiTailwindCssFill },
-      { name: "Prisma", icon: SiPrisma },
-      { name: "Postgresql", icon: BiLogoPostgresql },
-      { name: "Cloudinary", icon: SiCloudinary },
-      { name: "Paypal", icon: FaPaypal },
+      { name: "Typescript", icon: SiTypescript },
+      { name: "NextJs", icon: RiNextjsFill },
     ],
   },
 ] as const;

@@ -23,6 +23,6 @@ const HomePage: FC = () => {
       <Footer />
     </main>
   );
-}
+};
 
 export default HomePage;
