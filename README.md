@@ -1,6 +1,6 @@
 # Daniel Web Development Portfolio
 
-<img src="/images/daniel-80s-video-game-200-250.png" alt="Daniel González Briseño" />
+<img width="200" height="250" alt="daniel-80s-video-game-200-250" src="https://github.com/user-attachments/assets/3889e57e-5705-47d2-ab1e-ee58abeb9794" alt="Daniel González Briseño" />
 
 ## Install Dependencies
 
