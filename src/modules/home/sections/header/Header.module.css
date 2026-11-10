@@ -1,0 +1,51 @@
+@reference "tailwindcss";
+
+.navContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: --spacing(5);
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  gap: --spacing(1);
+  padding: --spacing(5);
+  border: solid 1px --alpha(var(--color-white) / 15%);
+  border-radius: var(--radius-4xl);
+  background-color: --alpha(var(--color-white) / 10%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.navItem {
+  padding-inline: --spacing(4);
+  padding-block: --spacing(1.5);
+  border-radius: var(--radius-4xl);
+  color: --alpha(var(--color-white) / 70%);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-family: var(--font-serif);
+  transition-property: color, background-color, border-color, outline-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+
+  @variant hover {
+    background-color: --alpha(var(--color-white) / 20%);
+    color: --alpha(var(--color-gray-50) / 50%);
+  }
+}
+
+.navItemSelected {
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-900);
+
+  @variant hover {
+    background-color: --alpha(var(--color-white) / 80%);
+    color: var(--color-gray-900);
+  }
+}

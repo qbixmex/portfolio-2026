@@ -1,0 +1,51 @@
+@reference "tailwindcss";
+
+.eyeBrowWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.eyeBrow {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: var(--tracking-widest);
+  background-image: linear-gradient(
+    to right in oklab,
+    var(--color-emerald-300) 0%,
+    var(--color-sky-400) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  line-height: var(--text-3xl--line-height);
+  text-align: center;
+  margin-top: --spacing(6);
+
+  @variant md {
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
+  }
+}
+
+.description {
+  text-align: center;
+  color: --alpha(var(--color-gray-50) / 40%);
+  margin-top: --spacing(4);
+  font-style: italic;
+  max-width: var(--container-md);
+  margin-inline: auto;
+
+  @variant md {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+  }
+
+  @variant lg {
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
+  }
+}

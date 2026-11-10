@@ -1,0 +1,23 @@
+import type { FC, ComponentPropsWithoutRef } from 'react';
+import GrainImage from '@/assets/images/grain.jpg';
+import styles from './Card.module.css';
+import { cn } from 'cn';
+
+const Card: FC<ComponentPropsWithoutRef<'div'>> = (props) => {
+  const { children, className, ...restProps } = props;
+
+  return (
+    <div
+      className={cn([ styles.wrapper, className ])}
+      {...restProps}
+    >
+      <div
+        className={styles.cardBackground}
+        style={{ background: `url(${GrainImage.src})` }}
+      />
+      {children}
+    </div>
+  );
+};
+
+export default Card;

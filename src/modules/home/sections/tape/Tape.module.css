@@ -1,0 +1,52 @@
+@reference "tailwindcss";
+
+.tape {
+  padding-block: --spacing(16);
+  overflow-x: clip;
+
+  @variant lg {
+    padding-block: --spacing(24);
+  }
+}
+
+.background {
+  rotate: -3deg;
+  margin-inline: calc(var(--spacing) * -1);
+  background-image: linear-gradient(
+    to right in oklab,
+    var(--color-emerald-300) 0%,
+    var(--color-sky-400) 100%
+  );
+}
+
+.wrapper {
+  display: flex;
+  mask-image: linear-gradient(to right,transparent,black 10%,black 90%,transparent);
+}
+
+.wordsList {
+  display: flex;
+  gap: --spacing(4);
+  padding-right: --spacing(4);
+  animation-duration: 45s;
+  padding-block: --spacing(3);
+}
+
+.word_star {
+  display: inline-flex;
+  gap: --spacing(4);
+  align-items: center;
+  color: var(--color-stone-900);
+}
+
+.word {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: var(--text-sm);
+}
+
+.starIcon {
+  width: --spacing(6);
+  height: --spacing(6);
+  rotate: 12deg;
+}

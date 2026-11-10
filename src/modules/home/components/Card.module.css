@@ -1,0 +1,36 @@
+@reference "tailwindcss";
+
+.wrapper {
+  background-color: var(--color-stone-800);
+  border-radius: var(--radius-3xl);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  &::after {
+    z-index: 10;
+    content: '';
+    position: absolute;
+    inset: 0;
+    outline: 2px solid --alpha(var(--color-gray-50) / 20%);
+    outline-offset: -2px;
+    border-radius: var(--radius-3xl);
+    pointer-events: none;
+  }
+}
+
+.card {
+  background-color: var(--color-stone-800);
+  border-radius: var(--radius-3xl);
+  padding: --spacing(6);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.cardBackground {
+  position: absolute;
+  inset: 0;
+  opacity: 5%;
+  z-index: -10;
+}

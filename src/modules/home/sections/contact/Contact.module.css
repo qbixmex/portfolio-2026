@@ -1,0 +1,71 @@
+@reference "tailwindcss";
+
+.contact {
+  position: relative;
+  padding-block: --spacing(16);
+  padding-top: --spacing(14);
+
+  @variant lg {
+    padding-block: --spacing(24);
+    padding-top: --spacing(20);
+  }
+}
+
+.card {
+  background-image: linear-gradient(
+    to right in oklab,
+    var(--color-emerald-500) 0%,
+    var(--color-sky-900) 100%
+  );
+  color: var(--color-stone-900);
+  padding-inline: --spacing(10);
+  padding-block: --spacing(8);
+  border-radius: var(--radius-3xl);
+  text-align: center;
+  outline: 2px solid --alpha(var(--color-white) / 50%);
+  outline-offset: -2px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  @variant md {
+    text-align: left;
+  }
+}
+
+.cardBackground {
+  position: absolute;
+  inset: 0;
+  opacity: 5%;
+  z-index: -10;
+}
+
+.cardContent {
+  width: 100%;
+  padding-inline: --spacing(5);
+
+  @variant md {
+    padding-inline: --spacing(10);
+    margin-inline: auto;
+  }
+
+  @variant lg {
+    padding-inline: 0;
+    width: 75%;
+  }
+}
+
+.carHeading {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+  font-weight: 600;
+  margin-bottom: --spacing(5);
+  color: var(--color-zinc-950);
+
+  @variant md {
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+    margin-bottom: --spacing(10);
+  }
+}

@@ -1,0 +1,28 @@
+@reference "tailwindcss";
+
+.wrapper {
+  display: flex;
+  mask-image: linear-gradient(to right,transparent,black 10%,black 90%,transparent);
+}
+
+.tools {
+  display: flex;
+  flex: none;
+  gap: --spacing(6);
+  padding-block: --spacing(0.5);
+  padding-right: --spacing(6);
+}
+
+.techIconTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: --spacing(4);
+  padding-block: --spacing(4);
+  padding-inline: --spacing(3);
+  border-radius: var(--radius-xl);
+  outline: 1px solid --alpha(var(--color-white) / 10%);
+}
+
+.techTitle {
+  font-weight: 600;
+}

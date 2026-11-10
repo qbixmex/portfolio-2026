@@ -1,0 +1,54 @@
+@reference "tailwindcss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: --spacing(5);
+  align-items: center;
+  margin-block: --spacing(5);
+
+  @variant md {
+    display: block;
+  }
+}
+
+.text {
+  margin-top: --spacing(5);
+  font-size: var(--text-lg);
+  line-height: var(--text-lg--line-height);
+  font-style: italic;
+  color: var(--color-stone-300);
+  letter-spacing: var(--tracking-wider);
+
+  @variant md {
+    margin-top: --spacing(6);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+  }
+}
+
+.btn {
+  width: 100%;
+  padding-block: --spacing(5);
+  padding-inline: 0;
+  background-color: var(--color-stone-600);
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: #fff;
+  transition-property: color, background-color, border-color, outline-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+
+  @variant hover {
+    background-color: var(--color-stone-500);
+  }
+
+  @variant md {
+    width: auto;
+    padding-block: --spacing(0.5);
+    padding-inline: --spacing(2);
+    margin-left: --spacing(2);
+    border-radius: var(--radius-xs);
+  }
+}

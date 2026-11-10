@@ -1,0 +1,193 @@
+@reference "#globals";
+
+.about {
+  position: relative;
+  margin-block: --spacing(20);
+
+  @variant lg {
+    margin-block: --spacing(28);
+  }
+}
+
+.aboutAnchor {
+  position: absolute;
+  top: calc(var(--spacing) * -20);
+}
+
+.cardClasses {
+  height: 320px;
+}
+
+.cardsReadingAndToolbox {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: --spacing(20);
+  gap: --spacing(8);
+}
+
+.scrollLeft {
+  animation: var(--animate-move-left);
+  animation-duration: 60s;
+}
+
+.scrollRight {
+  animation: var(--animate-move-right);
+  animation-duration: 30s;
+}
+
+.toolboxItems {
+  margin-block: --spacing(6);
+}
+
+.cardsHobbiesAndMap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: --spacing(8);
+  margin-top: --spacing(8);
+}
+
+.skillsCard {
+  height: auto;
+
+  @variant md {
+    grid-column: span 3 / span 3;
+  }
+
+  @variant lg {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.skillsCardHeader {
+  background-color: transparent;
+}
+
+.hobbiesCard {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: --spacing(10);
+
+  @variant md {
+    grid-column: span 3 / span 3;
+  }
+
+  @variant lg {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.hobbiesCardHeader {
+  padding-bottom: --spacing(6);
+}
+
+.otherTools {
+  display: grid;
+  grid-template-columns: 2fr;
+  gap: --spacing(5);
+  padding-inline: --spacing(5);
+
+  @variant md {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @variant lg {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @variant xl {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.tool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: --spacing(2);
+  padding: --spacing(5);
+  border: 1px solid var(--color-stone-500);
+  border-radius: var(--radius-lg);
+}
+
+.toolTitle {
+  font-weight: 500;
+  color: var(--color-stone-100);
+}
+
+.toolIconSvg {
+  width: --spacing(8);
+  height: --spacing(8);
+}
+
+.toolIcon {
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+}
+
+.mapCard {
+  padding: 0;
+  position: relative;
+
+  @variant md {
+    grid-column: span 2 / span 2;
+  }
+
+  @variant lg {
+    grid-column: span 1 / span 1;
+  }
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mapIconContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: --spacing(12);
+  height: --spacing(12);
+  display: grid;
+  place-content: center;
+  border-radius: 9999px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+  }
+}
+
+.mapIconBackground,
+.mapIconAnimation {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to right in oklab,
+    var(--color-emerald-300) 0%,
+    var(--color-sky-400) 100%
+  );
+  border-radius: 9999px;
+  opacity: 0.5;
+}
+
+.mapIconBackground {
+  z-index: -20;
+}
+
+.mapIconAnimation {
+  z-index: -10;
+  animation: var(--animate-ping);
+  animation-duration: 2s;
+}
+
+.mapIcon {
+  width: --spacing(7) !important;
+  rotate: 25deg;
+}

@@ -1,0 +1,134 @@
+@reference "#globals";
+
+.testimonials {
+  padding-block: --spacing(16);
+
+  @variant lg {
+    padding-block: --spacing(24);
+  }
+}
+
+.testimonialsBackground {
+  display: flex;
+  margin-top: --spacing(12);
+  padding-block: --spacing(6);
+  padding-left: --spacing(8);
+  overflow-x: clip;
+  mask-image: linear-gradient(to right,transparent,black 10%,black 90%,transparent);
+
+  @variant lg {
+    margin-top: --spacing(20);
+  }
+}
+
+.testimonialsContainer {
+  display: flex;
+  flex: none;
+  animation-duration: 120s;
+  gap: --spacing(8);
+  padding-right: --spacing(8);
+
+  @variant hover {
+    animation-play-state: paused;
+  }
+}
+
+.testimonialHeader {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: --spacing(4);
+  align-items: center;
+
+  @variant md {
+    flex-direction: row;
+  }
+}
+
+.cardClasses {
+  max-width: var(--container-xs);
+  padding: --spacing(6);
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+
+  @variant md {
+    max-width: var(--container-md);
+    padding: --spacing(8);
+  }
+
+  @variant hover {
+    scale: 105%;
+  }
+}
+
+.imageWrapper {
+  width: --spacing(32);
+  height: --spacing(32);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: --var(--color-stone-700);
+  border-radius: 50%;
+  overflow: hidden;
+  border: solid 1px var(--color-stone-500);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain
+}
+
+.info {
+  width: 100%;
+}
+
+.name {
+  font-weight: 600;
+  text-align: center;
+  font-size: var(--text-xl);
+
+  @variant md {
+    text-align: left;
+  }
+}
+
+.position {
+  font-style: italic;
+  color: var(--color-stone-500);
+  text-align: center;
+
+  @variant md {
+    text-align: left;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  justify-content: end;
+  width: 100%;
+  margin-top: --spacing(2);
+  color: var(--color-gray-500);
+  transition-property: color, background-color, border-color, outline-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+
+  @variant hover {
+    color: var(--color-gray-200);
+  }
+
+  @variant md {
+    position: static;
+  }
+}
+
+.icon svg {
+  width: --spacing(8);
+  height: --spacing(8);
+}
